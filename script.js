@@ -1,3 +1,4 @@
+// 16 * 16 grid
 let container = document.querySelector(".container");
 
 for (let i = 1; i <= 16; i++) {
@@ -9,3 +10,14 @@ for (let i = 1; i <= 16; i++) {
     container.appendChild(div);
   }
 }
+
+// hover effect
+let divs = document.querySelectorAll(".container div");
+divs.forEach((div) => {
+  div.addEventListener("mouseover", () => {
+    div.style.backgroundColor = "black";
+    setTimeout(() => {
+      div.style.backgroundColor = "";
+    }, 500);
+  });
+});
